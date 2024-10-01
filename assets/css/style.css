@@ -1,0 +1,112 @@
+/* Style for the start button */
+.container{
+    width: 1180px;
+    margin: auto 0;
+}
+.start-button {
+    width: 100px;
+    cursor: pointer;
+}
+
+/* Style for the offcanvas popup */
+.offcanvas {
+    position: fixed;
+    bottom: -100%; 
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    transition: bottom 0.3s ease-in-out;
+}
+
+/* Active state of the offcanvas */
+.offcanvas.show {
+    bottom: 0;
+}
+
+/* Offcanvas header with icon */
+.offcanvas-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offcanvas-header h2 {
+    margin: 0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Style for progress bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 100%;
+    background-color: #007BFF;
+    border-radius: 5px;
+    width: 0%; 
+    transition: width 0.1s ease-in-out;
+}
+
+/* Toggle switch */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007BFF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
